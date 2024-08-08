@@ -1,0 +1,89 @@
+.parent {
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.charts {
+  height: 280px; 
+  width: 45%;
+  max-width: 450px; 
+  background-color: #007FFF0f;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card{
+    width:200px;
+    height:fit-content;
+    padding:20px;
+    margin:20px;
+}
+
+.charts-parent {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.cards {
+  justify-self: flex-end;
+  width: 500px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@media only screen and (max-width: 1400px) {
+  .parent {
+    height: fit-content;
+    flex-direction: column;
+  }
+  .charts-parent {
+    width: 100%;
+  }
+  .cards{
+    width: 100%;
+    justify-content: space-between;
+  }
+  .card{
+    width: 18%;
+  }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .charts-parent{
+        flex-direction: column;
+    }
+    .charts{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    .cards {
+      margin: 20px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 10px;
+      width: 100%;
+    }
+    
+    .card {
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box; 
+    }
+}
