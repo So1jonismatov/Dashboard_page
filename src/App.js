@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/add" element={<AddProduct />} />
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route path="*" element={<Navigate to="/" />} /> {/* Redirect to home for unmatched routes */}
       </Routes>
     </Router>
